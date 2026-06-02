@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
-import { PROCESS, SERVICES, SITE } from "@/lib/site";
+import { PROCESS, SERVICE_AREAS, SERVICES, SITE } from "@/lib/site";
+import { buildBreadcrumbJsonLd, buildHomePageJsonLd } from "@/lib/seo";
 
 const stats = [
   ["NY", "Built for New York properties"],
@@ -13,8 +14,14 @@ const stats = [
 const projectTypes = ["Apartment turnovers", "Common-area upgrades", "Interior renovations", "Retail & office refreshes", "Building repairs", "Owner punch lists"];
 
 export default function HomePage() {
+  const jsonLd = [
+    buildHomePageJsonLd(),
+    buildBreadcrumbJsonLd([{ name: "Home", url: SITE.url }]),
+  ];
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="relative overflow-hidden gradient-hero">
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white/70 to-transparent" />
         <div className="mx-auto grid min-h-[86vh] max-w-7xl items-center gap-12 px-4 py-20 md:px-6 lg:grid-cols-[1.05fr_0.95fr]">
@@ -26,7 +33,7 @@ export default function HomePage() {
               Modern general contracting with a cleaner, sharper project experience.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              Continental General Contracting helps property owners, landlords, managers, and commercial clients move from scope to finished space with organized crews, protected jobsites, and clear communication.
+              Continental General Contracting helps property owners, landlords, managers, and commercial clients across NYC, Long Island, Westchester, Rockland, North Jersey, and surrounding counties move from scope to finished space with organized crews, protected jobsites, and clear communication.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <CTAButton href="/contact">Request an Estimate</CTAButton>
@@ -113,6 +120,27 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <section id="service-areas" className="bg-brand-tint/70 py-18 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="max-w-3xl">
+            <p className="font-heading text-sm font-semibold uppercase tracking-[0.22em] text-brand">Service areas</p>
+            <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-5xl">General contracting across NYC and the surrounding counties.</h2>
+            <p className="mt-5 text-muted leading-relaxed">
+              CGC supports renovation, repair, build-out, property turnover, and maintenance scopes across all five boroughs plus Long Island, Westchester, the Lower Hudson Valley, North Jersey, and nearby counties.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {SERVICE_AREAS.map((area) => (
+              <div key={`${area.place}-${area.county}`} className="rounded-2xl border border-brand/10 bg-white p-4 shadow-sm">
+                <p className="font-heading font-semibold text-foreground">{area.place}</p>
+                <p className="mt-1 text-sm text-muted">{area.county} • {area.region}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       <section className="py-18 md:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">

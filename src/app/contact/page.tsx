@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import { CTAButton } from "@/components/CTAButton";
-import { SERVICES, SITE } from "@/lib/site";
+import { SEO_KEYWORDS, SERVICES, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Request an Estimate",
-  description: "Request an estimate from Continental General Contracting for renovations, repairs, turnovers, build-outs, and property improvements in New York.",
+  title: "Request a General Contracting Estimate in NYC",
+  description:
+    "Request an estimate from Continental General Contracting for renovations, repairs, apartment turnovers, commercial build-outs, maintenance, and property improvements across NYC and surrounding counties.",
+  keywords: SEO_KEYWORDS,
+  alternates: { canonical: `${SITE.url}/contact` },
+  openGraph: {
+    title: "Request an Estimate | Continental General Contracting",
+    description:
+      "Get a clean, coordinated GC estimate for NYC renovations, repairs, turnovers, build-outs, and property improvement scopes.",
+    url: `${SITE.url}/contact`,
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
