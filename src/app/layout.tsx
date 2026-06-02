@@ -36,6 +36,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
+    employee: {
+      "@type": "Person",
+      name: SITE.contactName,
+    },
     areaServed: SITE.serviceArea,
     logo: `${SITE.url}/cgc-logo.jpg`,
   };

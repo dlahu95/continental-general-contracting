@@ -3,10 +3,11 @@ export const SITE = {
   shortName: "Continental GC",
   domain: "continentalgeneralcontracting.com",
   url: "https://continentalgeneralcontracting.com",
-  phone: "929-483-3752",
-  phoneHref: "tel:+1" + "9294833752",
-  email: "dardan@continentalleadabatement.com",
-  emailMailto: "mailto:dardan@continentalleadabatement.com?subject=Continental%20General%20Contracting%20Estimate%20Request",
+  contactName: "Dardan Lahu",
+  phone: "718-679-7045",
+  phoneHref: "tel:+1" + "7186797045",
+  email: "Dlahu95@gmail.com",
+  emailMailto: "mailto:Dlahu95@gmail.com?subject=Continental%20General%20Contracting%20Estimate%20Request",
   serviceArea: "New York City, Long Island, Westchester, and surrounding New York areas",
 };
 

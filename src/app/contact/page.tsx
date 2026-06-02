@@ -18,6 +18,7 @@ export default function ContactPage() {
           <div className="mt-8 rounded-3xl bg-white p-6 shadow-card">
             <h2 className="font-display text-2xl font-bold">Speak with the team</h2>
             <ul className="mt-5 space-y-4 text-muted">
+              <li><span className="block text-xs uppercase tracking-[0.18em] text-brand">Contact</span><span className="font-semibold text-foreground">{SITE.contactName}</span></li>
               <li><span className="block text-xs uppercase tracking-[0.18em] text-brand">Phone</span><a href={SITE.phoneHref} className="font-semibold text-foreground hover:text-brand">{SITE.phone}</a></li>
               <li><span className="block text-xs uppercase tracking-[0.18em] text-brand">Email</span><a href={SITE.emailMailto} className="font-semibold text-foreground hover:text-brand">{SITE.email}</a></li>
               <li><span className="block text-xs uppercase tracking-[0.18em] text-brand">Service Area</span><span className="font-semibold text-foreground">{SITE.serviceArea}</span></li>
