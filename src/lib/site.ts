@@ -11,7 +11,7 @@ export const SITE = {
   serviceArea:
     "New York City, Long Island, Westchester, Rockland, Putnam, North Jersey, and surrounding counties",
   seoDescription:
-    "Continental General Contracting provides renovations, remodeling, build-outs, repairs, turnovers, exterior improvements, and property maintenance across NYC, Long Island, Westchester, Rockland, Putnam, North Jersey, and surrounding counties.",
+    "Continental General Contracting provides renovations, remodeling, build-outs, repairs, turnovers, exterior improvements, property maintenance, and certified lead abatement coordination across NYC, Long Island, Westchester, Rockland, Putnam, North Jersey, and surrounding counties.",
   foundingArea: "New York City",
 };
 
@@ -52,6 +52,11 @@ export const SERVICES = [
     title: "Partner GC Support",
     text: "A dependable partner for specialty trades, lead-safe coordination, occupied-building logistics, phased construction scopes, and projects connected to Continental Lead Abatement work.",
     keywords: ["general contractor support", "occupied building contractor", "lead-safe renovation coordination"],
+  },
+  {
+    title: "Certified Lead Abatement Support",
+    text: "Certified lead abatement and lead-safe project support for older New York properties, including coordination with Continental Lead Abatement for EPA-certified lead paint work, containment-conscious scopes, and property-manager-ready documentation.",
+    keywords: ["certified lead abatement contractor", "lead abatement NYC", "lead-safe renovation", "EPA certified lead contractor"],
   },
 ];
 
@@ -102,4 +107,8 @@ export const SEO_KEYWORDS = [
   "general contractor Rockland County",
   "general contractor Bergen County",
   "general contractor Hudson County",
+  "certified lead abatement company NYC",
+  "lead abatement contractor NYC",
+  "EPA certified lead contractor New York",
+  "lead-safe renovation contractor NYC",
 ];

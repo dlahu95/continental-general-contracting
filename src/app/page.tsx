@@ -6,7 +6,7 @@ import { buildBreadcrumbJsonLd, buildHomePageJsonLd } from "@/lib/seo";
 
 const stats = [
   ["NY", "Built for New York properties"],
-  ["6", "Core contracting service lines"],
+  ["7", "Core contracting service lines"],
   ["1", "Accountable project partner"],
   ["Clean", "Modern jobsite standards"],
 ];
@@ -75,6 +75,42 @@ export default function HomePage() {
                 <h3 className="font-display text-xl font-bold text-foreground">{service.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{service.text}</p>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="lead-abatement" className="bg-brand-tint/70 py-18 md:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 md:px-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="rounded-[2rem] border border-brand/10 bg-white p-6 shadow-card md:p-8">
+            <p className="font-heading text-sm font-semibold uppercase tracking-[0.22em] text-brand">Certified lead abatement</p>
+            <h2 className="mt-3 font-display text-3xl font-bold text-foreground md:text-5xl">
+              General contracting backed by certified lead abatement capability.
+            </h2>
+            <p className="mt-5 leading-relaxed text-muted">
+              Continental General Contracting can support older New York and NYC properties where renovation, repair, turnover, or build-out work may involve lead paint concerns. Through Continental Lead Abatement, the team brings certified lead abatement experience, lead-safe coordination, containment-conscious planning, and documentation-focused project support.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted">
+              This helps landlords, property managers, owners, and commercial clients keep general contracting scopes organized when lead-safe work practices or certified lead abatement coordination are part of the project.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <CTAButton href="/contact">Request a Lead-Safe Project Estimate</CTAButton>
+              <CTAButton href="https://continentalleadabatement.com" variant="outline">
+                Visit Continental Lead Abatement
+              </CTAButton>
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              "Certified lead abatement company support",
+              "EPA-certified lead paint project coordination",
+              "Lead-safe renovation and repair planning",
+              "NYC property-manager-ready documentation",
+            ].map((item) => (
+              <div key={item} className="glass-card rounded-3xl p-6">
+                <div className="mb-4 h-1.5 w-16 rounded-full bg-brand" />
+                <p className="font-heading text-lg font-semibold text-foreground">{item}</p>
+              </div>
             ))}
           </div>
         </div>
